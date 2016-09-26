@@ -2,7 +2,7 @@
 <!-- Logback Configuration. -->
 <configuration debug="false">
 
-	<property name="za.fin.ebank.log.dir" value="D:/za-fin-ebank/logs" />
+	<property name="log.dir" value="D:/ebank/logs" />
 	<appender name="STDOUT" class="com.za.logback.extend.appender.RegReplaceConsoleAppender">
 		<target>System.out</target>
 		<regStr>(\d{4})\d{10}(\w{4})</regStr>
@@ -22,7 +22,7 @@
 		<filter>
 			<level>TRACE</level>
 		</filter>	
-		<file>${za.fin.ebank.log.dir}/za-fin-ebank.log</file>
+		<file>${log.dir}/za-fin-ebank.log</file>
 		<encoder charset="GBK"> <!-- encoder 可以指定字符集，对于中文输出有意义 -->
 			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger -
 				%msg%n</pattern>
